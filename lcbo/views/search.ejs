@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+input[type=text]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+label {
+	width: 100%;
+	display: inline-block;
+}
+
+.submitbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    left: 25%;
+}
+form {
+	border:1px solid #ccc;
+	position: absolute; 
+	width: 50%;
+	top: 45%;
+	left: 40%;
+	margin-top: -50px;
+    margin-left: -100px;
+}
+
+.container {
+    padding: 16px;
+}
+.image1{
+    position: relative;
+    float: right;
+}
+.data{
+    position: relative;
+    float: left;
+}
+
+</style>
+</head>
+<body>
+<form name='sendback' action='/'>
+<div class="parent">  
+        <div class="data">
+            <label> Product details for ID: <%= prod %></label>
+            <label> Name : <%= name %></label>
+            <label> Price: $ <%= price %> </label>
+            <label> Tags: <%= tags %></label>
+            <label> Primary category: <%= primary%> </label>
+            <label> Origin: <%= origin %></label>
+            <label> Package:<%= package %> </label>
+            <label> Alcohol content: <%= alcohol %></label>
+            <label> Inventory count:<%= inventory %></label>
+        </div>
+        <div  class ="image1">
+            <img src='<%= url %>' width="100px"  height="100px"/>
+        </div>
+        <input class="submitbtn" type="submit" value="Search Again">
+</div>
+</form>
+</body>
+</html>
